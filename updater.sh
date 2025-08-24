@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
-echo "Lets enlight the flame!"
+echo -e "\e[33mLets enlight the flame!"
 
-echo "Collecting logs..."
+echo -e "Collecting logs..."
+echo -e "\e[32m"
+
+# Change to the config-prometheus directory first
+cd "$HOME/.config-prometheus" || {
+    echo -e "\e[31mError: Could not change to config-prometheus directory!\e[0m"
+    exit 1
+}
+
 git pull
+echo -e "\e[33m"
 echo "Got em."
 
 set -e
@@ -14,3 +23,5 @@ source ~/.bashrc
 
 
 echo "The fire has been renewed."
+
+echo -e "\e[0m"
