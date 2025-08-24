@@ -2,11 +2,6 @@
 # ~/.bashrc
 #
 
-# Base16-Shell
-BASE16_SHELL="$HOME/.config/base16-shell"
-[ -s "$BASE16_SHELL/profile_helper.sh" ] && source "$BASE16_SHELL/profile_helper.sh"
-
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -16,6 +11,8 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 alias neofetch='neofetch --source ~/.config/neofetch/ascii/uwu.txt'
 alias fetch_fire='~/.config-prometheus/updater.sh'
+neofetch
+
 
 # Auto-check for config-prometheus updates
 check_config_updates() {
@@ -68,4 +65,4 @@ check_config_updates() {
 # Run the update check
 check_config_updates
 
-neofetch
+
