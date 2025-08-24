@@ -39,6 +39,14 @@ else
     echo "✅ Created new .bashrc with Prometheus config"
 fi
 
+# Update Hyprland configuration
+echo "Updating Hyprland configuration..."
+if [ -f "$HOME/.config-prometheus/hyprland/scripts/update_hypr.sh" ]; then
+    bash "$HOME/.config-prometheus/hyprland/scripts/update_hypr.sh"
+else
+    echo "Warning: update_hypr.sh not found"
+fi
+
 # Source the updated config
 echo "Sourcing updated configuration..."
 source ~/.bashrc
