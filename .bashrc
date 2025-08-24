@@ -6,12 +6,14 @@
 [[ $- != *i* ]] && return
 
 alias edit='micro'
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
-alias neofetch='neofetch --source ~/.config/neofetch/ascii/uwu.txt'
-alias fetch_fire='~/.config-prometheus/updater.sh'
-neofetch
+
+PS1='\w > '
+#PS1='[\u@\h \W]\$ '
+
+#TODO: Reanabled fetch
+#alias neofetch='neofetch --source ~/.config/neofetch/ascii/uwu.txt'
+#alias fetch_fire='~/.config-prometheus/updater.sh'
+#neofetch
 
 
 # Auto-check for config-prometheus updates
