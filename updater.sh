@@ -47,6 +47,14 @@ else
     echo "Warning: update_hypr.sh not found"
 fi
 
+# Update Waybar configuration
+echo "Updating Waybar configuration..."
+if [ -f "$HOME/.config-prometheus/waybar/scripts/update_waybar.sh" ]; then
+    bash "$HOME/.config-prometheus/waybar/scripts/update_waybar.sh"
+else
+    echo "Warning: update_waybar.sh not found"
+fi
+
 # Source the updated config
 echo "Sourcing updated configuration..."
 source ~/.bashrc

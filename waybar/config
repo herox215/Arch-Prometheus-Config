@@ -1,0 +1,57 @@
+{
+  "layer": "top",
+  "position": "top",
+  "style": "~/.config/waybar/style.css",
+  "modules-left": ["custom/archangel"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["clock", "pulseaudio", "battery", "backlight"],
+
+  "hyprland/workspaces": {
+    "ignore-workspaces": ["^(special:)?10$"],
+    "format": "{icon}",
+    "format-icons": {
+      "1": "Sol",
+      "2": "Mercury", 
+      "3": "Venus",
+      "4": "Terra",
+      "5": "Mars",
+      "6": "Jupiter",
+      "7": "Saturn",
+      "8": "Uranus",
+      "9": "Neptune",
+      "default": "Cosmos"
+    }
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S}"
+  },
+
+  "pulseaudio": {
+    "format": "🔊 {volume}%",
+    "format-muted": "🔇 {volume}%",
+    "on-click": "~/.config/waybar/volume_menu.sh",
+    "tooltip": false,
+    "states": {
+      "muted": {
+        "format": "🔇 {volume}%"
+      }
+    }
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["▒▒▒▒▒", "▒▒▒▒█", "▒▒▒██", "▒▒███", "▒████", "█████"]
+  },
+
+  "backlight": {
+    "format": "🔆 {percent}%"
+  },
+
+  "custom/archangel": {
+    "exec": "~/.config/waybar/archangel_status.sh",
+    "interval": 10,
+    "format": "{}",
+    "tooltip": false
+  }
+}
