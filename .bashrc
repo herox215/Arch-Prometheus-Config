@@ -12,7 +12,7 @@ PS1='\w > '
 
 #TODO: Reanabled fetch
 #alias neofetch='neofetch --source ~/.config/neofetch/ascii/uwu.txt'
-#alias fetch_fire='~/.config-prometheus/updater.sh'
+alias enlight_me='~/.config-prometheus/updater.sh'
 #neofetch
 
 
@@ -55,7 +55,7 @@ check_config_updates() {
         
         if [[ "$local_commit" != "$remote_commit" ]]; then
             echo -e "\e[33m🔥 Config-Prometheus update available! 🔥\e[0m"
-            echo -e "\e[32mRun 'fetch_fire' to update.\e[0m"
+            echo -e "\e[32mRun 'enlight_me' to update.\e[0m"
         fi
         
         # Update last check timestamp
